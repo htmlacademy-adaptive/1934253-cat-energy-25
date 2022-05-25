@@ -1,0 +1,61 @@
+.controls {
+  display: flex;
+  align-items: center;
+}
+
+.controls__label {
+  font-family: $additional-font-family;
+  font-size: 16px;
+  line-height: 20px;
+  color: $basic-black;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+  }
+}
+
+.controls__range {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    margin: 0 23px;
+  }
+}
+
+.controls__bar {
+  @media (min-width: $tablet-width) {
+    height: 6px;
+    border-radius: 6px;
+    background-color: $slider-gray;
+  }
+}
+
+
+.controls__toggle {
+  @media (min-width: $tablet-width) {
+    @include style-reset;
+    position: absolute;
+    left: calc(50% - 17px);
+    top: -13px;
+    width: 34px;
+    height: 34px;
+    border: 1px solid $special-gray;
+    border-radius: 50%;
+    background-color: $white;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+
+    &::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $basic-green;
+      position: absolute;
+      left: 38.24%;
+      right: 38.24%;
+      top: 38.24%;
+      bottom: 38.24%;
+    }
+  }
+}

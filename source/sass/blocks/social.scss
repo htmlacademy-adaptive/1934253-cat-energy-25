@@ -1,0 +1,27 @@
+.social {
+  @include list-reset;
+  margin: 20px 0;
+  width: 132px;
+  display: grid;
+  grid-template-columns: 28px 28px 28px;
+  gap: 24px;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 132px;
+    margin: 0;
+  }
+}
+
+.social__link {
+  display: block;
+
+  &:hover path {
+    fill: $special-green;
+  }
+
+  &:focus path {
+    opacity: 0.3;
+    fill: $special-green;
+  }
+}

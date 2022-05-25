@@ -1,0 +1,76 @@
+.header {
+  width: 100%;
+  background-color: $white;
+
+  @media (min-width: $desktop-width) {
+    background-color: transparent;
+  }
+}
+
+.header__wrapper {
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.header__logo {
+  display: inline-block;
+  min-height: 37px;
+  padding-top: 3px;
+  padding-bottom: 11px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 16px;
+    padding-top: 0;
+    padding-bottom: 2px;
+  }
+}
+
+.header__toggle {
+  @include style-reset;
+
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+  background-image: url("../img/icons/toggle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  top: 14px;
+  right: $padding-mobile;
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
+
+  .no-js & {
+    display: none;
+  }
+
+  .menu-opened & {
+    background-image: url("../img/icons/toggle-close.svg");
+  }
+}
+
+.header__user-nav {
+  margin-left: -$padding-mobile;
+  margin-right: -$padding-mobile;
+
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
+}

@@ -1,0 +1,153 @@
+.about {
+  margin-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 43px;
+    border-bottom: 1px solid $about-gray;
+    padding-bottom: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0;
+    margin-bottom: 0;
+    border: none;
+  }
+}
+
+.about__heading {
+  margin: 0 0 40px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 72px;
+  }
+}
+
+.about__list {
+  @include list-reset;
+
+  @media (min-width: $tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    column-gap: 76px;
+  }
+}
+
+.about__item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 0;
+    padding-right: 63px;
+    padding-bottom: 53px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+  }
+}
+
+.about__item::before {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  background-color: $basic-green;
+  flex-shrink: 0;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 31px;
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.about__item::after {
+  @media (min-width: $tablet-width) {
+    font-family: $additional-font-family;
+    font-size: 280px;
+    line-height: 280px;
+    color: $basic-gray;
+    position: absolute;
+    top: -39px;
+    right: 79px;
+    z-index: -1;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 3px;
+  }
+}
+
+.about__item--useful::before {
+  content: "";
+  background-image: url("../img/icons/about-useful.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.about__item--useful::after {
+  @media (min-width: $tablet-width) {
+    content: "1";
+    right: 98px;
+  }
+
+  @media (min-width: $desktop-width) {
+    right: 30px;
+  }
+}
+
+
+.about__item--easy::before {
+  content: "";
+  background-image: url("../img/icons/about-easy.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about__item--easy::after {
+  @media (min-width: $tablet-width) {
+    content: "2";
+  }
+}
+
+.about__item--diet::before {
+  content: "";
+  background-image: url("../img/icons/about-diet.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.about__item--diet::after {
+  @media (min-width: $tablet-width) {
+    content: "3";
+  }
+}
+
+.about__item--change::before {
+  content: "";
+  background-image: url("../img/icons/about-change.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+
+.about__item--change::after {
+  @media (min-width: $tablet-width) {
+    content: "4";
+  }
+}
