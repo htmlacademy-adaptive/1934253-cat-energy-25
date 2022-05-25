@@ -1,0 +1,18 @@
+.toggle {
+  @include style-reset;
+
+  display: inline-block;
+  width: 24px;
+  height: 18px;
+  background-image: url("../img/icons/toggle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  border: none;
+}
+
+@media (min-width: $tablet-width) {
+  .toggle {
+    display: none;
+  }
+}

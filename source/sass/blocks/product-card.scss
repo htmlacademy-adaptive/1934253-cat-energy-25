@@ -1,0 +1,128 @@
+.product-card {
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 36px 39px;
+    position: relative;
+
+    @media (min-width: $desktop-width) {
+      margin-top: -14px;
+    }
+
+    &::after {
+      display: block;
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      top: 83px;
+      background-color: $basic-gray;
+      z-index: -1;
+    }
+  }
+}
+
+.product-card__box {
+  display: flex;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 17px;
+
+  @media (min-width: $tablet-width) {
+    display: block;
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
+
+.product-card__img {
+  text-align: center;
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  min-width: 140px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 36px;
+  }
+}
+
+.product-card__main {
+  min-width: 140px;
+  flex-grow: 1;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+  }
+}
+
+.product-card__title {
+  display: block;
+  margin-bottom: 14px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+
+  & h3 {
+    @include style-reset;
+    font-family: $additional-font-family;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: $dark-gray;
+    width: 76px;
+
+    @media (min-width: $tablet-width) {
+      font-size: 20px;
+      line-height: 24px;
+      text-align: center;
+      width: 155px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.product-card__table {
+  @include list-reset;
+}
+
+.product-card__row {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: 1px solid $special-gray;
+    padding-bottom: 9px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 4px;
+  }
+}
+
+.product-card__row p {
+  @include style-reset;
+  font-size: 12px;
+  line-height: 16px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .product-card__row + .product-card__row {
+    margin-top: 7px;
+  }
+}

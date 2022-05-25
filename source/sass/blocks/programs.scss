@@ -1,0 +1,33 @@
+.programs {
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 45px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 71px;
+  }
+}
+
+.programs__list {
+  @include list-reset;
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 80px;
+  }
+}
+
+.programs__item + .programs__item {
+  margin-top: 21px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 32px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}

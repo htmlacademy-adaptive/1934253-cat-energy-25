@@ -1,0 +1,41 @@
+.btn {
+  display: block;
+  font-family: $additional-font-family;
+  font-size: 16px;
+  line-height: 20px;
+  color: $white;
+  text-transform: uppercase;
+  background-color: $basic-green;
+  min-height: 40px;
+  text-align: center;
+  padding: 10px 26px;
+  border: none;
+  width: 100%;
+
+  &:hover {
+    background-color: $special-green;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+  }
+
+  &--gray {
+    background-color: $basic-gray;
+    color: $space-gray;
+
+    &:hover {
+      background-color: $btn-gray;
+    }
+
+    &:active {
+      color: rgba($space-gray, 0.3);
+    }
+  }
+
+  &--promo {
+    @media (min-width: $tablet-width) {
+      width: 280px;
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.example-table__tr {
+  display: grid;
+  grid-template-columns: 124px 124px;
+  gap: 30px;
+  justify-items: center;
+}
+
+.example-table__th {
+  font-family: $additional-font-family;
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: 400;
+  position: relative;
+  width: 124px;
+  padding-top: 14px;
+  padding-bottom: 7px;
+}
+
+.example-table__th::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  display: block;
+  width: 124px;
+  height: 56px;
+  border: 1px solid $special-gray;
+  border-radius: 3px;
+}
+
+.example-table__td {
+  font-size: 12px;
+  line-height: 12px;
+  text-align: center;
+  padding: 0 7px;
+  width: 72px;
+  position: relative;
+  z-index: 1;
+  background-color: $light-gray;
+}

@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font-family;
+  font-style: normal;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $font-color;
+  background-color: $white;
+  min-width: $min-width;
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  font-size: 0;
+  line-height: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}

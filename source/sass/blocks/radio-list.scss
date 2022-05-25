@@ -1,0 +1,21 @@
+.radio-list {
+  list-style: none;
+  margin: 0;
+  padding: 22px 20px 18px;
+  border-bottom: 1px solid $border-gray;
+  border-top: 1px solid $border-gray;
+
+  @media (min-width: $tablet-width) {
+    border: 1px solid $input-gray;
+    padding: 25px 27px;
+    margin: 0 30px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin: 0;
+  }
+}
+
+.radio-list__item + .radio-list__item {
+  margin-top: 13px;
+}

@@ -1,0 +1,259 @@
+.example {
+  background-color: $light-gray;
+  padding: 23px 0 40px;
+  position: relative;
+
+  @media (min-width: $tablet-width) {
+    background-color: $white;
+    padding: 0 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-bottom: 72px;
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+      width: 100%;
+      min-height: 462px;
+      background-color: $light-gray;
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+    }
+  }
+}
+
+.example__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $desktop-width) {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+}
+
+.example__left {
+  margin-bottom: 40px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop-width) {
+    z-index: 2;
+    margin: 0;
+  }
+}
+
+.example__img {
+  position: relative;
+  width: 280px;
+  height: 232px;
+  margin: 0 auto 15px;
+
+  @media (min-width: $tablet-width) {
+    width: 592px;
+    height: 511px;
+    margin-bottom: 25px;
+  }
+}
+
+.example__cat {
+  position: absolute;
+  top: 0;
+  overflow: hidden;
+
+  &--before {
+    left: 0;
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      left: 1px;
+    }
+  }
+
+  &--after {
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 0;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+    }
+  }
+}
+
+.example__cat img {
+  max-width: none;
+  width: 280px;
+  height: 232px;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.example__right {
+  @media (min-width: $tablet-width) {
+    position: relative;
+    z-index: 2;
+  }
+}
+
+.example__description {
+  @include style-reset;
+
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 0 53px;
+    padding-right: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 69px;
+    padding-right: 194px;
+  }
+}
+
+.example__text {
+  @include style-reset;
+
+  font-family: $additional-font-family;
+  line-height: 20px;
+  text-transform: uppercase;
+  color: $basic-black;
+  text-align: center;
+}
+
+.example__label {
+  border: none;
+  background-color: transparent;
+  font-family: $additional-font-family;
+  font-size: 16px;
+  line-height: 20px;
+  color: $basic-black;
+  text-transform: uppercase;
+  padding: 0;
+
+  @media (min-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px dotted rgba(0, 0, 0, 0.24);
+
+    &:hover {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    }
+
+    &:active {
+      border: none;
+    }
+  }
+}
+
+
+.example__controls {
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  width: 200px;
+  margin: 0 auto;
+
+  @media (min-width: $tablet-width) {
+    width: 571px;
+  }
+}
+
+.example__range {
+  position: relative;
+  padding: 8px 0;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.example__bar {
+  width: 85.58px;
+  height: 14px;
+  left: 62px;
+  top: 8px;
+  background: $white;
+  border: 1px solid $special-gray;
+  border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    width: 426px;
+    height: 6px;
+    border-radius: 6px;
+    background-color: $slider-gray;
+  }
+}
+
+.example__heading {
+  @media (min-width: $tablet-width) {
+    margin-bottom: 65px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 143px;
+    margin-top: 75px;
+  }
+}
+
+.example__toggle {
+  position: absolute;
+  width: 35.66px;
+  height: 6px;
+  left: 5px;
+  top: 12px;
+  border: none;
+  background: $basic-green;
+  border-radius: 6px;
+
+  @media (min-width: $tablet-width) {
+    @include style-reset;
+    left: calc(50% - 17px);
+    top: 0;
+    width: 34px;
+    height: 34px;
+    border: 1px solid $special-gray;
+    border-radius: 50%;
+    background-color: $white;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.16));
+
+    &:hover {
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.19));
+    }
+
+    &:active {
+      border: 1px solid $basic-green;
+      filter: drop-shadow(0 3px 5px rgba(0, 0, 0, 0.2));
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: $basic-green;
+      position: absolute;
+      left: 38.24%;
+      right: 38.24%;
+      top: 38.24%;
+      bottom: 38.24%;
+    }
+  }
+}

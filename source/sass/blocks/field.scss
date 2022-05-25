@@ -1,0 +1,86 @@
+.field {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.field__mail {
+  position: absolute;
+  right: 16px;
+  top: 36.54%;
+  bottom: 38.46%;
+}
+
+.field__phone {
+  position: absolute;
+  right: 13px;
+  top: 30.77%;
+  bottom: 30.77%;
+
+  &:focus ~ path {
+    fill: red;
+  }
+}
+
+.field__label {
+  font-family: $additional-font-family;
+
+  text-transform: uppercase;
+  margin-right: 15px;
+  white-space: nowrap;
+}
+
+.field__input {
+  font-family: $additional-font-family;
+  text-transform: uppercase;
+  padding: 13px 40px 13px 15px;
+  width: 100%;
+  border: 1px solid $input-gray;
+  box-sizing: border-box;
+
+  &:hover {
+    border: 1px solid $special-gray;
+  }
+
+  &:focus {
+    outline: 2px solid $space-gray;
+  }
+
+  &:focus ~ svg {
+    color: $basic-green;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px 40px 10px 19px;
+  }
+}
+
+.field__input::placeholder {
+  font-size: 16px;
+  font-weight: 18px;
+  color: $space-gray;
+}
+
+.field__label sub {
+  font-size: 16px;
+  font-family: $additional-font-family;
+  vertical-align: baseline;
+}
+
+.field--error {
+  .field__input {
+    border: 2px solid $red;
+
+    &:focus {
+      border-color: $special-gray;
+    }
+
+    &:focus ~ svg {
+      color: $basic-green;
+    }
+
+    & ~ svg {
+      color: $red;
+    }
+  }
+}
